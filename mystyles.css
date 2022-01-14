@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+/* font-family: 'Press Start 2P', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+/* font-family: 'Roboto Mono', monospace; */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+/* font-family: 'Montserrat', sans-serif; */
+
+* {
+	/* view layout on screen while styling | remove after styling	*/
+	/* 	outline: 0.0625rem dotted #fff; */
+
+	/* include rules for specific web page below this line */
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit; /* inherits property from parent element */
+}
+body {
+	font-family: "Montserrat", sans-serif;
+	color: #fff;
+	background-color: #2e183b;
+	padding: 1em;
+}
+
+/* <div class="container"> */
+.container {
+	display: flex;
+}
+
+/* <header class="top"> */
+.top {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 1em;
+}
+.top h1 {
+	padding-bottom: 0.5em;
+	font-family: "Press Start 2P", cursive;
+	font-size: 2.25rem;
+	color: #ff5200;
+}
+.top h2 {
+	padding-bottom: 2em;
+	text-transform: uppercase;
+	font-size: 1.15rem;
+	font-family: "Roboto Mono", monospace;
+	color: #ff5200;
+}
+.top .image {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: auto;
+}
+.top footer {
+	font-family: "Roboto Mono", monospace;
+	color: #ff5200;
+	padding-bottom: 3em;
+}
+.top p a {
+	font-family: "Press Start 2P", cursive;
+	color: #66ff00;
+}
+.top p a:hover {
+	color: #ff77ff;
+}
+.top p a:active {
+	color: #66ff00;
+	background-color: #ff5200;
+}
+
+main {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+/* <div class="flexible-2"> */
+.flexible-2 {
+	display: flex;
+}
+.flexible-2 .column {
+	flex: 1 1 50%;
+	margin-left: 3em;
+}
+
+.column h2,
+h3,
+h4 {
+	font-family: "Roboto Mono", monospace;
+	text-transform: uppercase;
+	color: #ff5200;
+	padding-top: 1em;
+}
+.column p {
+	line-height: 1.5rem;
+	padding-top: 1em;
+	padding-left: 1em;
+}
+.bold {
+	color: #ff5200;
+}
+
+/* metacritic user score */
+.score {
+	font-family: "Roboto Mono", monospace;
+	color: #66ff00;
+}
+
+/* emphasized text*/
+.emphasize {
+	font-family: "Roboto Mono", monospace;
+	color: #ff5200;
+}
+
+/* links */
+a {
+	text-decoration: none;
+	font-family: "Roboto Mono", monospace;
+	color: #ffff00;
+}
+a:hover {
+	color: #ff77ff;
+	background-color: #66ff00;
+}
+a:active {
+	color: #66ff00;
+	background-color: #ff5200;
+}
