@@ -1,138 +1,231 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-/* font-family: 'Press Start 2P', cursive; */
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
-/* font-family: 'Roboto Mono', monospace; */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
-/* font-family: 'Montserrat', sans-serif; */
-
+/* MY TEMPLATE */
+/* CSS Reset */
 * {
-	/* view layout on screen while styling | remove after styling	*/
-	/* 	outline: 0.0625rem dotted #fff; */
-
-	/* include rules for specific web page below this line */
+	/* Outline to view layout on screen while styling | Remove after styling */
+	/* outline: 0.0625em dashed #ff0075; */
 	margin: 0;
 	padding: 0;
-}
-html {
-	font-size: 100%;
-	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 *,
 *:before,
 *:after {
-	box-sizing: inherit; /* inherits property from parent element */
+	box-sizing: inherit;
 }
-body {
-	font-family: "Montserrat", sans-serif;
-	color: #fff;
-	background-color: #2e183b;
-	padding: 1em;
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+a {
+	text-decoration: none;
 }
 
-/* <div class="container"> */
+/* declaring variables for colors */
+:root {
+	--white: #fff;
+	--darkviolet: #2e183b;
+	--darkorange: #ff5200;
+	--brightgreen: #66ff00;
+	--blushpink: #ff77ff;
+	--yellow: #ffff00;
+}
+
+/* basic styles */
+body {
+	font-family: "Montserrat", sans-serif;
+	color: var(--white);
+	background-color: var(--darkviolet);
+	max-width: 75%;
+	margin: 0 auto;
+	padding: 1em;
+}
+h1 {
+	font-family: "Press Start 2P", cursive;
+}
+h2,
+h3,
+h4 {
+	font-family: "Roboto Mono", monospace;
+}
+
+/* BACK TO TOP button */
+#top-button {
+	display: none;
+	position: fixed;
+	bottom: 1em;
+	right: 1em;
+	z-index: 2;
+	font-size: 2.5rem;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	color: var(--darkorange);
+	cursor: pointer;
+	padding: 0.25em;
+}
+
+/* two columns container */
 .container {
 	display: flex;
 }
-
-/* <header class="top"> */
+/* header */
 .top {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	flex-wrap: nowrap;
-	padding-top: 1em;
-	padding-bottom: 1em;
-	padding-left: 1em;
 }
 .top h1 {
-	padding-bottom: 0.5em;
-	font-family: "Press Start 2P", cursive;
+	padding-top: 1em;
 	font-size: 2.25rem;
-	color: #ff5200;
+	color: var(--darkorange);
 }
 .top h2 {
-	padding-bottom: 2em;
+	padding: 1em 0 1em 0;
 	text-transform: uppercase;
 	font-size: 1.15rem;
-	font-family: "Roboto Mono", monospace;
-	color: #ff5200;
+	color: var(--darkorange);
 }
 .top .image {
-	max-width: 100%;
+	width: 100%;
 	height: auto;
 	margin-bottom: auto;
 }
 .top footer {
 	font-family: "Roboto Mono", monospace;
-	color: #ff5200;
-	padding-bottom: 3em;
-}
-.top p a {
-	font-family: "Press Start 2P", cursive;
-	color: #66ff00;
-}
-.top p a:hover {
-	color: #ff77ff;
-}
-.top p a:active {
-	color: #66ff00;
-	background-color: #ff5200;
-}
-
-main {
-	padding-top: 1em;
+	color: var(--darkorange);
 	padding-bottom: 1em;
 }
 
-/* <div class="flexible-2"> */
-.flexible-2 {
-	display: flex;
-}
-.flexible-2 .column {
-	flex: 1 1 50%;
-	margin-left: 3em;
-}
-
-.column h2,
+/* main part */
+.column article h2,
 h3,
 h4 {
-	font-family: "Roboto Mono", monospace;
 	text-transform: uppercase;
-	color: #ff5200;
-	padding-top: 1em;
+	padding: 1em 0;
 }
-.column p {
-	line-height: 1.5rem;
-	padding-top: 1em;
+.column article h2 {
+	color: var(--darkorange);
 	padding-left: 1em;
 }
-.bold {
-	color: #ff5200;
+.column article h3 {
+	color: var(--blushpink);
+	padding-left: 2em;
 }
-
+.column article h4 {
+	color: var(--brightgreen);
+	padding-left: 3em;
+}
+.column article p {
+	line-height: 1.75rem;
+	padding: 1em 3em 1em;
+}
+.column article p .bold {
+	color: var(--darkorange);
+}
 /* metacritic user score */
 .score {
 	font-family: "Roboto Mono", monospace;
-	color: #66ff00;
+	color: var(--brightgreen);
 }
-
 /* emphasized text*/
 .emphasize {
 	font-family: "Roboto Mono", monospace;
-	color: #ff5200;
+	color: var(--darkorange);
 }
-
 /* links */
 a {
-	text-decoration: none;
 	font-family: "Roboto Mono", monospace;
-	color: #ffff00;
+	color: var(--yellow);
 }
 a:hover {
-	color: #ff77ff;
-	background-color: #66ff00;
+	color: var(--blushpink);
+	background-color: var(--brightgreen);
 }
 a:active {
-	color: #66ff00;
-	background-color: #ff5200;
+	color: var(--brightgreen);
+	background-color: var(--darkorange);
+}
+
+/* Tablet styles */
+/* max-width 768px */
+@media screen and (max-width: 768px) {
+	/* basic styles */
+	body {
+		max-width: 100%;
+		margin: 0 1em;
+		padding: 0;
+	}
+	/* BACK TO TOP button */
+	#top-button {
+		bottom: 0.5em;
+		right: 0.5em;
+		font-size: 2.25rem;
+	}
+	/* header */
+	.top h1 {
+		padding-top: 0.5em;
+	}
+	/* main part */
+	.column article h2 {
+		padding-left: 0.75em;
+	}
+	.column article h3 {
+		padding-left: 1.5em;
+	}
+	.column article h4 {
+		padding-left: 2.5em;
+	}
+	.column article p {
+		padding: 1em 2.5em 1em;
+	}
+}
+
+/* Mobile styles */
+/* max-width 425px */
+@media screen and (max-width: 425px) {
+	/* BACK TO TOP button */
+	#top-button {
+		bottom: 0.25em;
+		right: 0.25em;
+		font-size: 2.25rem;
+	}
+	/* two columns container */
+	.container {
+		flex-direction: column;
+	}
+	/* header */
+	.top {
+		text-align: center;
+	}
+	.top h1 {
+		padding-top: 1em;
+		font-size: 1rem;
+	}
+	.top h2 {
+		padding: 1em 0 1em 0;
+		font-size: 0.75rem;
+	}
+	.top footer {
+		padding: 0.5em 0;
+	}
+	/* main part */
+	.column article h2,
+	h3,
+	h4 {
+		padding: 0.5em 0;
+		font-size: 1rem;
+	}
+	.column article h2 {
+		padding-left: 0.75em;
+	}
+	.column article h3 {
+		padding-left: 1.25em;
+	}
+	.column article h4 {
+		padding-left: 1.5em;
+	}
+	.column article p {
+		padding: 1em 1.75em 1em;
+	}
 }
