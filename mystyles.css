@@ -147,25 +147,146 @@ a:active {
 	background-color: var(--darkorange);
 }
 
-/* Tablet styles */
-/* max-width 768px */
-@media screen and (max-width: 768px) {
+/* Laptop styles */
+/* max-width 64em (1024px) */
+@media (max-width: 64em) {
 	/* basic styles */
 	body {
+		/* font-family: "Montserrat", sans-serif; */
+		/* color: var(--white); */
+		/* background-color: var(--darkviolet); */
 		max-width: 100%;
+		/* margin: 0 auto; */
+		/* padding: 1em; */
+	}
+	/* h1 {
+		font-family: "Press Start 2P", cursive;
+	}
+	h2,
+	h3,
+	h4 {
+		font-family: "Roboto Mono", monospace;
+	} */
+
+	/* BACK TO TOP button */
+	#top-button {
+		/* display: none; */
+		/* position: fixed; */
+		bottom: 0.5em;
+		right: 0.5em;
+		/* z-index: 2; */
+		/* font-size: 2.5rem; */
+		/* border: none; */
+		/* outline: none; */
+		/* background-color: transparent; */
+		/* color: var(--darkorange); */
+		/* cursor: pointer; */
+		/* padding: 0.25em; */
+	}
+
+	/* two columns container */
+	/* .container {
+		display: flex;
+	} */
+	/* header */
+	/* .top {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		flex-wrap: nowrap;
+	} */
+	.top h1 {
+		padding-top: 0.5em;
+		/* font-size: 2.25rem; */
+		/* color: var(--darkorange); */
+	}
+	/* .top h2 {
+		padding: 1em 0 1em 0;
+		text-transform: uppercase;
+		font-size: 1.15rem;
+		color: var(--darkorange);
+	} */
+	/* .top .image {
+		width: 100%;
+		height: auto;
+		margin-bottom: auto;
+	} */
+	/* .top footer {
+		font-family: "Roboto Mono", monospace;
+		color: var(--darkorange);
+		padding-bottom: 1em;
+	} */
+
+	/* main part */
+	.column article h2,
+	h3,
+	h4 {
+		/* text-transform: uppercase; */
+		padding: 0.5em 0;
+	}
+	.column article h2 {
+		/* color: var(--darkorange); */
+		padding-left: 1em;
+	}
+	/* .column article h3 {
+		color: var(--blushpink);
+		padding-left: 2em;
+	} */
+	/* .column article h4 {
+		color: var(--brightgreen);
+		padding-left: 3em;
+	} */
+	/* .column article p {
+		line-height: 1.75rem;
+		padding: 1em 3em 1em;
+	} */
+	/* .column article p .bold {
+		color: var(--darkorange);
+	} */
+	/* metacritic user score */
+	/* .score {
+		font-family: "Roboto Mono", monospace;
+		color: var(--brightgreen);
+	} */
+	/* emphasized text*/
+	/* .emphasize {
+		font-family: "Roboto Mono", monospace;
+		color: var(--darkorange);
+	} */
+	/* links */
+	/* a {
+		font-family: "Roboto Mono", monospace;
+		color: var(--yellow);
+	}
+	a:hover {
+		color: var(--blushpink);
+		background-color: var(--brightgreen);
+	}
+	a:active {
+		color: var(--brightgreen);
+		background-color: var(--darkorange);
+	} */
+}
+
+/* Tablet styles */
+/* max-width 48em (768px) */
+@media (max-width: 48em) {
+	/* basic styles */
+	body {
+		/* max-width: 100%; */
 		margin: 0 1em;
 		padding: 0;
 	}
 	/* BACK TO TOP button */
 	#top-button {
-		bottom: 0.5em;
-		right: 0.5em;
+		/* bottom: 0.5em; */
+		/* right: 0.5em; */
 		font-size: 2.25rem;
 	}
 	/* header */
-	.top h1 {
+	/* .top h1 {
 		padding-top: 0.5em;
-	}
+	} */
 	/* main part */
 	.column article h2 {
 		padding-left: 0.75em;
@@ -182,8 +303,8 @@ a:active {
 }
 
 /* Mobile styles */
-/* max-width 425px */
-@media screen and (max-width: 425px) {
+/* max-width 26.5em (425px) */
+@media (max-width: 26.5em) {
 	/* BACK TO TOP button */
 	#top-button {
 		bottom: 0.25em;
